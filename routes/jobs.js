@@ -38,7 +38,7 @@ router.post("/", async (req, res) => {
     title: req.body.title,
     employer: req.body.employer,
     publishDate: new Date(req.body.publishDate),
-    pageCount: req.body.pageCount,
+    salary: req.body.salary,
     description: req.body.description,
   });
   saveCover(job, req.body.cover);
@@ -80,7 +80,7 @@ router.put("/:id", async (req, res) => {
     job.title = req.body.title;
     job.employer = req.body.employer;
     job.publishDate = new Date(req.body.publishDate);
-    job.pageCount = req.body.pageCount;
+    job.salary = req.body.salary;
     job.description = req.body.description;
     if (req.body.cover != null && req.body.cover !== "") {
       saveCover(job, req.body.cover);

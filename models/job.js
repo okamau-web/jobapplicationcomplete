@@ -12,8 +12,8 @@ const jobSchema = new mongoose.Schema({
     type: Date,
     required: true
   },
-  pageCount: {
-    type: Number,
+  salary: {
+    type: String,
     required: true
   },
   createdAt: {
