@@ -25,7 +25,9 @@ const mongoose = require('mongoose')
 // db.on('error', error => console.error(error))
 // db.once('open', () => console.log('Connected to Mongoose'))
  
-mongoose.connect('mongodb://localhost/jobs', {
+//mongoose.connect('mongodb://localhost/jobs', 
+mongoose.connect("mongodb+srv://hannah:hanna@eventsdb-kcpmt.mongodb.net/job?retryWrites=true&w=majority",
+{
    useNewUrlParser: true,   useCreateIndex: true, useUnifiedTopology: true 
  }) .then(() => console.log('local mongoDB connected'))
  .catch(err => console.log('Something went wrong', err))
