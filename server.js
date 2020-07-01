@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({ limit: "10mb", extended: false }));
 
 const mongoose = require("mongoose");
 
-const dbLink = require("./mongodb")
+const dbLink = require("./dbase")
 
 // mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true })
 // const db = mongoose.connection
