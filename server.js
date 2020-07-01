@@ -20,6 +20,9 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ limit: "10mb", extended: false }));
 
 const mongoose = require("mongoose");
+
+const dbLink = require("./mongodb")
+
 // mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true })
 // const db = mongoose.connection
 // db.on('error', error => console.error(error))
@@ -28,7 +31,7 @@ const mongoose = require("mongoose");
 //mongoose.connect('mongodb://localhost/jobs',
 mongoose
   .connect(
-    "mongodb+srv://hannah:hanna@eventsdb-kcpmt.mongodb.net/job?retryWrites=true&w=majority",
+    dbLink,
     {
       useNewUrlParser: true,
       useCreateIndex: true,
